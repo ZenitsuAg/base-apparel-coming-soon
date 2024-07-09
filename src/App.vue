@@ -50,14 +50,12 @@ const validateEmail = () => {
                 </p>
 
                 <div class="border rounded-full border-desaturated-red focus-within:border-soft-red focus-within:border-2">
-                    <form @submit.prevent="validateEmail" >
-                        <label for="email" class="flex items-center justify-between ml-5">
-                            <input type="email" v-model="emailValue" placeholder="Email Address" class="w-full h-12 text-sm bg-transparent text-desaturated-red placeholder:text-desaturated-red focus:outline-none">
-                            <img :src="errorIcon" alt="error" v-if="showError">
-                            <button type="submit"class="p-5 text-3xl font-medium text-white duration-200 ease-in-out rounded-full px-7 bg-gradient-to-l from-soft-red to-soft-red/30 hover:translate-x-7 hover:shadow-lg hover:shadow-desaturated-red hover:bg-desaturated-red lg:px-12 lg:hover:from-pink-200 lg:hover:to-pink-200">
-                                <img :src="arrowIcon" alt="arrow">
-                            </button>
-                        </label>
+                    <form @submit.prevent="validateEmail" class="flex items-center justify-between ml-5">
+                        <input type="email" v-model="emailValue" placeholder="Email Address" class="w-full h-12 text-sm bg-transparent text-desaturated-red placeholder:text-desaturated-red focus:outline-none">
+                        <img :src="errorIcon" alt="error" v-if="showError">
+                        <button type="submit"class="p-5 text-3xl font-medium text-white duration-200 ease-in-out rounded-full px-7 bg-gradient-to-l from-soft-red to-soft-red/30 hover:translate-x-7 hover:shadow-lg hover:shadow-desaturated-red hover:bg-desaturated-red lg:px-12 lg:hover:from-pink-200 lg:hover:to-pink-200">
+                            <img :src="arrowIcon" alt="arrow">
+                        </button>
                     </form>
                 </div>
                 <p class="mt-2 ml-5 text-sm text-desaturated-red" v-if="showError" >Please provide a valid email</p>
