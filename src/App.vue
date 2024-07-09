@@ -28,19 +28,19 @@ const validateEmail = () => {
     </header>
 
     <main class="pb-8 md:p-0 w-[375px] mx-auto md:w-auto font-josefin bg-gradient-to-b from-desaturated-red/10 to-desaturated-red/5 md:flex md:flex-row-reverse md:bg-desktop-banner md:bg-repeat-y ">            
-            <section class=" max-lg:basis-1/2">
+            <div class=" max-lg:basis-1/2">
                 <img :src="mobileHero" alt="mobile-hero" class="h-64 overflow-clip md:hidden">
                 
                 <div class="bg-[url('../images/hero-desktop.jpg')] w-full h-full bg-no-repeat hidden md:max-lg:block"></div>
                 <img :src="desktopHero" alt="desktop-hero" class="hidden lg:block">
-            </section>
+            </div>
         
-        <section class="p-8 text-center basis-1/2 md:flex md:justify-around md:flex-col md:p-0 max-lg:mb-16">
+        <div class="p-8 text-center basis-1/2 md:p-0 max-lg:mb-16">
             
             <article class="md:ml-[5rem] md:mr-[7.5rem] md:mt-[8rem] lg:ml-[10.3125rem] lg:mr-[13.75rem] lg:mt-16 md:text-left">
-                <header class="hidden p-8 md:p-0 md:block">
+                <div class="hidden p-8 md:p-0 md:block">
                     <img :src="logo" alt="logo">
-                </header>
+                </div>
                 <h1 class="text-4xl lg:font-semibold uppercase tracking-[.5rem] md:text-5xl lg:text-6xl md:mt-[8.5rem] lg:tracking-[.9rem]">
                     <span class="font-light text-desaturated-red">We're</span> coming soon
                 </h1>
@@ -62,7 +62,7 @@ const validateEmail = () => {
                 </div>
                 <p class="mt-2 ml-5 text-sm text-desaturated-red" v-if="showError" >Please provide a valid email</p>
             </article>
-        </section>
+        </div>
     </main>
  
 </template>
